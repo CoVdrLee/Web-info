@@ -12,6 +12,10 @@ import dns.resolver
 domain = input ("Wat is het domein naam?: ")
 portscan = input("Wilt u ook de meest standaard open poorten checken? (ja/nee)")
 
+ip = socket.gethostbyname(domain)
+print("Dit is het IP adress: ",ip)
+
+#
 if (portscan == "ja" or portscan == "Ja" or portscan == "JA" or portscan == "J" or portscan == "j"):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     result = sock.connect_ex((domain, port))
@@ -21,9 +25,6 @@ if (portscan == "ja" or portscan == "Ja" or portscan == "JA" or portscan == "J" 
         print("port",port ,"is not open")
     sock.close()
 
-
-ip = socket.gethostbyname(domain)
-print("Dit is het IP adress: ",ip)
 
 #Opvragen van nameserver
 nameservers = dns.resolver.query(domain,'NS')
