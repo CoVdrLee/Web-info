@@ -14,12 +14,9 @@ from datetime import datetime
 
 domain = input ("Wat is het domein naam?: ")
 
+#Opvragen IP
 ip = socket.gethostbyname(domain)
 print("Dit is het IP adress: ",ip)
-
-
-
-
 
 #Opvragen van nameserver
 nameservers = dns.resolver.query(domain,'NS')
