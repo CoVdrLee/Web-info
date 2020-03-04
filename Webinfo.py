@@ -1,6 +1,7 @@
 counternameserver = 0
 nameserverlist = []
 port = 80
+
 import socket
 import dns.resolver
 import sys
@@ -95,4 +96,3 @@ if (portscankeuze == "ja" or portscankeuze == "Ja" or portscankeuze == "JA" or p
     else:
         print('\n')
         print('No Open Ports Found.')
-
