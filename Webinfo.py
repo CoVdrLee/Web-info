@@ -1,9 +1,3 @@
-#Web info
-#- Nameservers - Check
-#- CNAME -
-#- Certificaat
-#- Mailserver
-
 counternameserver = 0
 nameserverlist = []
 port = 80
@@ -37,8 +31,8 @@ if (portscankeuze == "ja" or portscankeuze == "Ja" or portscankeuze == "JA" or p
     try:
      # Ask for a host to scan
         print('\n')
-        remote_host_domain_name = ip
-        remote_host_ip_address = socket.gethostbyname(remote_host_domain_name)
+        remote_host_domain_name = domain
+        remote_host_ip_address = ip
 
     # Display information about the host to be scanned
         print('_' * 110)
