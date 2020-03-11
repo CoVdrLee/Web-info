@@ -9,11 +9,11 @@ from datetime import datetime
 
 domain = input ("Wat is het domein naam?: ")
 
-#Opvragen IP
+#IP
 ip = socket.gethostbyname(domain)
 print("Dit is het IP adress: ",ip)
 
-#Opvragen van nameserver
+#nameserver
 nameservers = dns.resolver.query(domain,'NS')
 for server in nameservers:
     counternameserver = counternameserver + 1
