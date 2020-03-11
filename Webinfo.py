@@ -1,6 +1,5 @@
 counternameserver = 0
 nameserverlist = []
-port = 80
 
 import socket
 import dns.resolver
@@ -48,6 +47,7 @@ if (portscankeuze == "ja" or portscankeuze == "Ja" or portscankeuze == "JA" or p
 
     # List to keep open ports
         open_ports = []
+
 
     # Scan all ports specified in the Port Range
         for port in (20,21,22,23,25,53,67,68,69,80,110,119,123,137,138,139,143,161,162,389,443,445,465,546,547,569,587,990,993,995,1080,1194,3306,3389,3689,5432,5800,5900,6346,8080):
